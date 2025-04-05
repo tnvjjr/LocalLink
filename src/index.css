@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 141 84% 97%; /* Light green background */
+    --foreground: 160 47% 23%; /* Forest green text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 47% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 47% 23%;
+
+    --primary: 152 42% 34%; /* Green theme */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 150 42% 42%; /* Lighter green */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 100 20% 94%;
+    --muted-foreground: 155 30% 38%;
+
+    --accent: 266 54% 60%; /* Purple for accent */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 147 30% 85%;
+    --input: 147 30% 85%;
+    --ring: 152 42% 34%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 141 84% 97%;
+    --sidebar-foreground: 160 47% 23%;
+    --sidebar-primary: 152 42% 34%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 147 30% 95%;
+    --sidebar-accent-foreground: 160 47% 23%;
+    --sidebar-border: 147 30% 85%;
+    --sidebar-ring: 152 42% 34%;
+  }
+
+  .dark {
+    --background: 157 42% 12%;
+    --foreground: 140 30% 90%;
+
+    --card: 157 42% 12%;
+    --card-foreground: 140 30% 90%;
+
+    --popover: 157 42% 12%;
+    --popover-foreground: 140 30% 90%;
+
+    --primary: 152 46% 52%;
+    --primary-foreground: 157 42% 12%;
+
+    --secondary: 155 39% 34%;
+    --secondary-foreground: 140 30% 90%;
+
+    --muted: 153 42% 23%;
+    --muted-foreground: 146 25% 75%;
+
+    --accent: 266 54% 45%;
+    --accent-foreground: 140 30% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 140 30% 90%;
+
+    --border: 153 42% 25%;
+    --input: 153 42% 25%;
+    --ring: 152 46% 52%;
+
+    --sidebar-background: 157 42% 12%;
+    --sidebar-foreground: 140 30% 90%;
+    --sidebar-primary: 152 46% 52%;
+    --sidebar-primary-foreground: 157 42% 12%;
+    --sidebar-accent: 153 42% 23%;
+    --sidebar-accent-foreground: 140 30% 90%;
+    --sidebar-border: 153 42% 25%;
+    --sidebar-ring: 152 46% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-adventure;
+    background-image: 
+      url('/textures/subtle-dots.png'),
+      linear-gradient(to bottom, hsl(141, 84%, 97%), hsl(141, 84%, 95%));
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-nature;
+  }
+}
+
+@layer components {
+  .nature-card {
+    @apply bg-white/90 backdrop-blur-sm border border-nature-leaf/20 rounded-lg shadow-lg overflow-hidden transition-all;
+  }
+
+  .text-shimmer {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-nature-forest via-nature-leaf to-nature-forest bg-[length:200%_auto] animate-shimmer;
+  }
+
+  .outdoor-button {
+    @apply relative overflow-hidden bg-gradient-forest text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg hover:scale-105;
+  }
+  
+  .outdoor-button::after {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white/20 scale-x-0 origin-left transition-transform duration-300;
+  }
+  
+  .outdoor-button:hover::after {
+    @apply scale-x-100;
+  }
+
+  .nature-icon-bg {
+    @apply bg-green-100 dark:bg-green-900/40 text-nature-leaf dark:text-green-400 rounded-full p-2;
+  }
+
+  .leaf-bg {
+    position: relative;
+  }
+  .leaf-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2348BB7820' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 20A7 7 0 0 0 9.8 8.8C15.3 7 17 2.4 17 2.4S17 7.9 11.5 9.7A7 7 0 0 0 11 20Z'/%3E%3Cpath d='M11.5 13.5a2.5 2.5 0 0 1-4.9-.6C8.5 11 11 12 11 12s-.5 1.8-.5 2.5c0 .5.2 1 .5 1.5'/%3E%3C/svg%3E");
+    background-repeat: space;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
