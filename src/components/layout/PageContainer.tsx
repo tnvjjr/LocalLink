@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from './Header';
 import { MapPin } from 'lucide-react';
@@ -28,6 +27,9 @@ const PageContainer: React.FC<PageContainerProps> = ({ children, fullHeight = fa
               
               <div className="text-sm text-white/70">
                 &copy; {new Date().getFullYear()} LocalLink Outdoor. Connect with nature lovers.
+                <div className="mt-2">
+                  Created by Evan Zhou, Sathvik Haridasu, Vijay Shrivarshan Vijayaraja, and Vikky Mutchukota
+                </div>
               </div>
             </div>
           </div>
