@@ -1,5 +1,5 @@
-# LocalLink Outdoor 3rd PLACE OVERALL IN EUREKA HACKS
-A modern web application that connects outdoor enthusiasts with each other in their local area, facilitating nature-based activities and fostering community connections through real-time chat and location-based discovery.
+# LocalLink  - 3rd PLACE OVERALL IN EUREKA HACKS
+A modern application that connects outdoor enthusiasts with each other in their local area, facilitating nature-based activities and fostering community connections through real-time chat and location-based discovery.
 
 [Image placeholder - to be added later]
 
