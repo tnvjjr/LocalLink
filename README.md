@@ -1,7 +1,7 @@
 # LocalLink  - 3rd PLACE OVERALL IN EUREKA HACKS
 A modern application that connects outdoor enthusiasts with each other in their local area, facilitating nature-based activities and fostering community connections through real-time chat and location-based discovery.
 
-[Image placeholder - to be added later]
+![Screenshot 2025-04-06 at 11 30 41 AM](https://github.com/user-attachments/assets/085b4930-2e4e-4a5c-87cb-38fcfbfab5ee)
 
 ## Table of Contents
 * [General Info](#general-information)
